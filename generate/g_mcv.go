@@ -24,28 +24,28 @@ func GenerateMcv(sname, currpath string) {
 	}
 	beeLogger.Log.Infof("是否生成 Model func: '%s'? [Y|N] ", sname)
 
-	// Generate the model
+	// Generate the model func
 	if utils.AskForConfirmation() {
 		GenerateModelFunc(sname, currpath)
 	}
 
 	beeLogger.Log.Infof("是否生成 Controller: '%s'? [Y|N] ", sname)
 
-	// Generate the model
+	// Generate the Controller
 	if utils.AskForConfirmation() {
 		GenerateController("back/"+sname, currpath)
 	}
 
 	beeLogger.Log.Infof("是否生成 View: '%s'? [Y|N] ", sname)
 
-	// Generate the model
+	// Generate the View
 	if utils.AskForConfirmation() {
 		GenerateView("back/"+sname, currpath)
 	}
 
 	beeLogger.Log.Infof("是否生成 Router: '%s'? [Y|N] ", sname)
 
-	// Generate the model
+	// Generate the Router
 	if utils.AskForConfirmation() {
 		GenerateRouter("back/"+sname, currpath)
 	}

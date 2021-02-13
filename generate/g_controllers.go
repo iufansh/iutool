@@ -98,9 +98,8 @@ func GenerateController(cname, currpath string) {
 
 var updateColSection = `"{{modelFieldName}}",`
 
-var querySection = `if v := strings.TrimSpace(c.GetString("{{modelFieldNameFirstLower}}")); v != "" {
-	query["{{modelFieldNameFirstLower}}"] = v
-	cond["{{modelFieldNameFirstLower}}"] = v
+var querySection = `if cond["{{modelFieldNameFirstLower}}"] = strings.TrimSpace(c.GetString("{{modelFieldNameFirstLower}}")); cond["{{modelFieldNameFirstLower}}"] != "" {
+	query["{{modelFieldNameFirstLower}}"] = cond["{{modelFieldNameFirstLower}}"]
 }
 `
 
