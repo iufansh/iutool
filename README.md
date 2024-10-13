@@ -1,5 +1,5 @@
 ## 根据bee修改的代码生成工具
-
+iutool 首次未安装时，执行go install
 # iutool help generate
 
 使用方法：
